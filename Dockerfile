@@ -1,7 +1,7 @@
-FROM node:11
+FROM node:12-alpine
 
 WORKDIR /app
-ADD . .
+ADD  . .
 RUN npm install && npm run build
 
 ENTRYPOINT [ "npm", "run", "start" ]
